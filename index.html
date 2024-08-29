@@ -2,50 +2,61 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine de Medicamentos</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitrine de Medicamentos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <img src="./assets/img/hospital-1_icon-icons.com_66068.png" alt="Logo da Farmácia Algoritmos">
-        <h1>Farmácia Saúde e Vida</h1>
-    </nav>
+  <nav>
+    <img src="" alt="Logo da Farmácia Algoritmos>">
+    <h1>Farmácia Saúde e Vida</h1>
+  </nav>
 
-    <div>
 
-    </div>
+  <div>
+    <form class="login-form">
+      <legend>Cadastro de medicamentos</legend>
 
-    <footer class="footer-app">
-        <div class="footer-app-list">
+      <div>
+        <label for="url-medicamento">Link do medicamento</label>
+        <input type="url" id="url-medicamento" required placeholder="Adicione a imagem do medicamento" />
+      </div>
 
-            <div>
-                <span class="footer-app-list-title">Farmácia Saúde e Vida</span>
-                <span>Av. Floriano Peixoto, 1000 - Centro - Santa Catarina</span>
-            </div>
+      <div>
+        <label for="nome-medicamento">Nome:</label>
+        <input type="text" id="nome-medicamento" required placeholder="Informe o nome do medicamento" />
+      </div>
 
-            <div>
-                <span class="footer-app-list-title">Contato</span>
-                <span>e-mail: contato@farmaciasaudeevida.com</span>
-                <span>telefone: (48) 4848-4848</span>
-            </div>
+      <div>
+        <label for="laboratorio">Laboratório:</label>
+        <input type="text" id="laboratorio" required placeholder="Informe o nome do laboratório" />
+      </div>
 
-            <div>
-                <span class="footer-app-list-title">Redes Sociais</span>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-            </div>
+      <div>
+        <label for="valor">Preço:</label>
+        <input type="number" required placeholder="Informe o preço do medicamento">
+      </div>
 
-        </div>
-        <div class="footer-app-rights">
-            <p>Todos os direitos reservados a Equipe Algoritmos®</p>
-        </div>
-    </footer>
+      <div>
+        <label for="msg">Indicação:</label>
+        <textarea id="msg" name="msg" maxlength="150" placeholder="Informe as indicações do medicamento"></textarea>
+      </div>
+      <div>
+        <button type="submit">Cadastrar novo medicamento</button>
+      </div>
+    </form>
 
-    <script src="./assets/js/script.js"></script>
+  </div>
+
+  <footer class="footer-app">
+    <p>Todos os direitos reservados a Equipe Algoritmos®</p>
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>

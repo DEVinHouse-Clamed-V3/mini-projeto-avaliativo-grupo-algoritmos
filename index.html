@@ -5,58 +5,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vitrine de Medicamentos</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <nav>
-    <img src="" alt="Logo da Farmácia Algoritmos>">
-    <h1>Farmácia Saúde e Vida</h1>
-  </nav>
-
-
-  <div>
-    <form class="login-form">
-      <legend>Cadastro de medicamentos</legend>
-
-      <div>
-        <label for="url-medicamento">Link do medicamento</label>
-        <input type="url" id="url-medicamento" required placeholder="Adicione a imagem do medicamento" />
+  <header class="header">
+    <nav>
+      <div class="nav-logo">
+        <img src="assets/hospital-1_icon-icons.webp" alt="Logo da Farmácia Algoritmos>">
+        <h1>Farmácia Saúde e Vida</h1>
       </div>
 
-      <div>
-        <label for="nome-medicamento">Nome:</label>
-        <input type="text" id="nome-medicamento" required placeholder="Informe o nome do medicamento" />
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Cadastro</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="container-cadastro">
+        <form class="login-form">
+          <fieldset>
+            <legend>Cadastro de medicamentos</legend>
+
+            <div>
+              <label for="url-medicamento">Imagem do medicamento:</label>
+              <input type="url" id="url-medicamento" required placeholder="Adicione o link da imagem do medicamento" />
+            </div>
+  
+            <div>
+              <label for="nome-medicamento">Nome:</label>
+              <input type="text" id="nome-medicamento" required placeholder="Informe o nome do medicamento" />
+            </div>
+  
+            <div>
+              <label for="laboratorio">Laboratório:</label>
+              <input type="text" id="laboratorio" required placeholder="Informe o nome do laboratório" />
+            </div>
+  
+            <div>
+              <label for="valor">Preço:</label>
+              <input type="number" required placeholder="Informe o preço do medicamento">
+            </div>
+  
+            <div>
+              <label for="msg">Indicação:</label>
+              <textarea id="msg" name="msg" maxlength="60" placeholder="Informe as indicações do medicamento"></textarea>
+            </div>
+            <div>
+              <button type="submit">Cadastrar novo medicamento</button>
+            </div>
+          </form>
+          </fieldset>
+          
+    </div>
+
+    <div class="todos-medicamentos">
+      <h2>Todos os medicamentos</h2>
+      <div class="lista-medicamentos">
+        <div class="medicamentos">
+          <img src="assets/dipirona--.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona--.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona--.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona--.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
+
+        <div class="medicamentos">
+          <img src="assets/dipirona.jfif" alt="">
+          <h3>Dipirona</h3>
+          <p>Laboratório: <span>Prati</span></p>
+          <p>Valor: <span>R$ 15,00</span></p>
+          <hr>
+          <p>Indicação: <span>Dores de cabeça, dores musculares, cólicas.</span></p>
+          <button>Saiba mais</button>
+        </div>
       </div>
 
-      <div>
-        <label for="laboratorio">Laboratório:</label>
-        <input type="text" id="laboratorio" required placeholder="Informe o nome do laboratório" />
-      </div>
+    </div>
 
-      <div>
-        <label for="valor">Preço:</label>
-        <input type="number" required placeholder="Informe o preço do medicamento">
-      </div>
 
-      <div>
-        <label for="msg">Indicação:</label>
-        <textarea id="msg" name="msg" maxlength="150" placeholder="Informe as indicações do medicamento"></textarea>
-      </div>
-      <div>
-        <button type="submit">Cadastrar novo medicamento</button>
-      </div>
-    </form>
-
-  </div>
 
   <footer class="footer-app">
-    <p>Todos os direitos reservados a Equipe Algoritmos®</p>
+    <div class="footer-app-list">
+
+      <div>
+        <span class="footer-app-list-title">Farmácia Saúde e Vida</span>
+        <span>Av. Floriano Peixoto, 1000 - Centro - Santa Catarina</span>
+      </div>
+
+      <div>
+        <span class="footer-app-list-title">Contato</span>
+        <span>e-mail: contato@farmaciasaudeevida.com</span>
+        <span>telefone: (48) 4848-4848</span>
+      </div>
+
+      <div>
+        <span class="footer-app-list-title">Redes Sociais</span>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+
+    </div>
+    <div class="footer-app-rights">
+      <p>Todos os direitos reservados a Equipe Algoritmos®</p>
+    </div>
   </footer>
 
 
-  <script src="script.js"></script>
+  <script src="./assets/hospital-1_icon-icons.com_66068.png"></script>
 </body>
 
 </html>

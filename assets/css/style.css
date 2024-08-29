@@ -1,143 +1,305 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #285619;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  height: 40px; /* Altura da imagem */
+  margin-left: 10px; /* Espaço à esquerda da imagem */
+}
+
+nav h1 {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  margin-left: 15px; /* Espaço entre imagem e texto*/
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* CADASTRO DE MEDICAMENTOS */
+.container-cadastro {
+  width: 500px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.login-form {
+ height: 550px;
+}
+
+.login-form fieldset {
+  padding: 30px;
+}
+
+.login-form label {
+  display: flex;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.login-form legend {
+  color: #285619;
+  font-size: 22px;
+}
+
+.login-form input,
+.login-form textarea {
+  outline-color: #4ca21d;
+  background: #f2f2f2;
+  width: 100%;
+  border: none;
+  padding: 8px;
+  margin-bottom: 8px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+.login-form button {
+  text-transform: uppercase;
+  background: #285619;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #4ca21d;
+}
+
+/* TODOS OS MEDICAMENTOS */
+.todos-medicamentos {
+  width: calc(100% - 500px);
+  margin-left: 500px;
+  padding: 20px;
+  position: relative;
+}
+
+.todos-medicamentos h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.lista-medicamentos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.medicamentos {
+  max-width: 280px;
+  margin: 20px auto;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.medicamentos img {
+  width: 180px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.medicamentos h3,
+.medicamentos p {
+  margin: 8px auto;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.medicamentos span {
+  font-weight: lighter;
+}
+
+.medicamentos button {
+  padding: 4px;
+  background-color: #285619;
+  color: #ffffff;
+  border-color: #17360c;
+}
+
+.medicamentos button:hover {
+  background-color: #4ca21d;
+}
+
+.footer-app {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  color: #285619;
+  background-color: #b4b4b4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.footer-app-rights {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.footer-app-list {
+  width: 90%;
+  height: calc(100% - 40px);
+  display: flex;
+  margin: 0 auto;
+  font-size: 12px;
+
+  .footer-app-list-title {
+    font-weight: bold;
+    font-size: 14px;
   }
-  
-  html,
-  body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-  }
-  
-  nav {
-    background-color: #285619; /* Cor de fundo verde conforme paleta da equipe*/
-    padding: 10px 20px;
-    display: flex; /* Alinha o texto ao lado da imagem */
-    align-items: center; /* Centraliza texto com a imagem */
-    border-bottom-left-radius: 15px; /* Borda arredondada lado esquerdo */
-    border-bottom-right-radius: 15px; /* Borda arredondada lado direito */
-  }
-  
-  nav img {
-    height: 40px; /* Altura da imagem */
-    margin-left: 10px; /* Espaço à esquerda da imagem */
-  }
-  
-  nav h1 {
-    color: white;
-    margin: 0;
-    font-size: 20px;
-    margin-left: 15px; /* Espaço entre imagem e texto*/
-  }
-  
-  /* CADASTRO DE MEDICAMENTOS */
-  .login-form {
-    max-width: 50%;
-    margin: 40px auto;
-    height: auto;
-    padding: 45px;
+
+  div {
+    width: 33.33%;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-top: 15px;
+
+    span,
+    a {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: #285619;
+    }
+
+    a:hover {
+      color: #17360c;
+    }
   }
-  
-  .login-form label {
-    display: flex;
-    text-align: left;
-    margin-bottom: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 15px;
+    /* Reduz o padding para telas menores */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    text-align: center;
+    /* Centraliza o texto dentro do nav */
   }
-  
-  .login-form legend {
-    color: #285619;
-    font-size: 26px;
-    margin-bottom: 10px;
+
+  nav img {
+    height: 30px;
+    /* Reduz a altura da imagem */
+    margin-right: 10px;
+    /* Reduz o espaço à direita da imagem */
   }
-  
+
+  nav h1 {
+    font-size: 18px;
+    /* Reduz o tamanho da fonte do título */
+    margin-left: 0;
+    /* Remove a margem esquerda */
+    text-align: center;
+    /* Centraliza o texto */
+  }
+
+  .login-form {
+    max-width: 90%;
+  }
+
   .login-form input,
   .login-form textarea {
-    outline-color: #4ca21d;
-    background: #f2f2f2;
-    width: 100%;
-    border: none;
-    padding: 10px;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 18px;
-    resize: vertical;
-    font-family: Arial, sans-serif;
+    font-size: 14px;
   }
-  
-  
-  .login-form button {
-    text-transform: uppercase;
-    background: #285619;
-    width: 100%;
-    border: none;
-    padding: 10px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .login-form button:hover {
-    background: #4ca21d;
-  }
-  
+
   .footer-app {
-    /* position: fixed; */
-    /* bottom: 0; */
-    height: 45px;
-    width: 100%;
-    color: #285619;
-    background-color: #4ca21d;
+    height: auto;
+    /* Ajusta a altura do footer */
+    padding: 10px;
+    /* Adiciona padding interno */
   }
-  
-  .footer-app p {
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 15px;
+    /* Reduz ainda mais o padding para telas muito pequenas */
   }
-  
-  
-  /* Media Queries para Responsividade */
-  @media (max-width: 768px) {
-    nav {
-      padding: 15px 15px; /* Reduz o padding para telas menores */
-      align-items: center; /* Centraliza os itens horizontalmente */
-      text-align: center; /* Centraliza o texto dentro do nav */
-    }
-  
-    nav img {
-      height: 30px; /* Reduz a altura da imagem */
-      margin-right: 10px; /* Reduz o espaço à direita da imagem */
-    }
-  
-    nav h1 {
-      font-size: 18px; /* Reduz o tamanho da fonte do título */
-      margin-left: 0; /* Remove a margem esquerda */
-      text-align: center; /* Centraliza o texto */
-    }
-  
-    .footer-app {
-      height: auto; /* Ajusta a altura do footer */
-      padding: 10px; /* Adiciona padding interno */
-    }
+
+  nav img {
+    height: 20px;
+    /* Reduz a altura da imagem para telas muito pequenas */
   }
-  
-  @media (max-width: 480px) {
-    nav {
-      padding: 15px; /* Reduz ainda mais o padding para telas muito pequenas */
-    }
-  
-    nav img {
-      height: 20px; /* Reduz a altura da imagem para telas muito pequenas */
-    }
-  
-    nav h1 {
-      font-size: 16px; /* Reduz o tamanho da fonte do título para telas muito pequenas */
-    }
-  
-    .footer-app {
-      font-size: 14px; /* Ajusta o tamanho da fonte no footer para telas pequenas */
-      padding: 5px; /* Ajusta o padding do footer para telas muito pequenas */
-    }
+
+  nav h1 {
+    font-size: 16px;
+    /* Reduz o tamanho da fonte do título para telas muito pequenas */
   }
-  
+
+  .login-form input,
+  .login-form textarea {
+    font-size: 12px;
+  }
+
+  .footer-app {
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte no footer para telas pequenas */
+    padding: 5px;
+    /* Ajusta o padding do footer para telas muito pequenas */
+  }
+}

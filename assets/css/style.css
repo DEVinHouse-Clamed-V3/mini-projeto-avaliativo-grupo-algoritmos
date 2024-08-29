@@ -1,151 +1,143 @@
-html,
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-nav {
-    background-color: #285619;
-    /* Cor de fundo verde conforme paleta da equipe*/
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+  }
+  
+  nav {
+    background-color: #285619; /* Cor de fundo verde conforme paleta da equipe*/
     padding: 10px 20px;
-    display: flex;
-    /* Alinha o texto ao lado da imagem */
-    align-items: center;
-    /* Centraliza texto com a imagem */
-    border-bottom-left-radius: 15px;
-    /* Borda arredondada lado esquerdo */
-    border-bottom-right-radius: 15px;
-    /* Borda arredondada lado direito */
-}
-
-nav img {
-    height: 40px;
-    /* Altura da imagem */
-    margin-left: 10px;
-    /* Espaço à esquerda da imagem */
-}
-
-nav h1 {
+    display: flex; /* Alinha o texto ao lado da imagem */
+    align-items: center; /* Centraliza texto com a imagem */
+    border-bottom-left-radius: 15px; /* Borda arredondada lado esquerdo */
+    border-bottom-right-radius: 15px; /* Borda arredondada lado direito */
+  }
+  
+  nav img {
+    height: 40px; /* Altura da imagem */
+    margin-left: 10px; /* Espaço à esquerda da imagem */
+  }
+  
+  nav h1 {
     color: white;
     margin: 0;
     font-size: 20px;
-    margin-left: 15px;
-    /* Espaço entre imagem e texto*/
-
-}
-
-.footer-app {
-    position: fixed;
-    bottom: 0;
-    height: 130px;
+    margin-left: 15px; /* Espaço entre imagem e texto*/
+  }
+  
+  /* CADASTRO DE MEDICAMENTOS */
+  .login-form {
+    max-width: 50%;
+    margin: 40px auto;
+    height: auto;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  
+  .login-form label {
+    display: flex;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .login-form legend {
+    color: #285619;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .login-form input,
+  .login-form textarea {
+    outline-color: #4ca21d;
+    background: #f2f2f2;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 18px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .login-form button {
+    text-transform: uppercase;
+    background: #285619;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background: #4ca21d;
+  }
+  
+  .footer-app {
+    /* position: fixed; */
+    /* bottom: 0; */
+    height: 45px;
     width: 100%;
     color: #285619;
-    background-color: #b4b4b4;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.footer-app-rights {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    font-size: 12px;
-}
-
-.footer-app-list {
-    width: 90%;
-    height: calc(100% - 40px);
-    display: flex;
-    margin: 0 auto;
-    font-size: 12px;
-
-    .footer-app-list-title {
-        font-weight: bold;
-        font-size: 14px;
-    }
-
-    div {
-        width: 33.33%;
-        text-align: center;
-        margin-top: 15px;
-
-        span,
-        a {
-            width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: #285619;
-        }
-
-        a:hover {
-            color: #17360c;
-        }
-    }
-}
-
-
-
-
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
+    background-color: #4ca21d;
+  }
+  
+  .footer-app p {
+    text-align: center;
+  }
+  
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 768px) {
     nav {
-        padding: 15px 15px;
-        /* Reduz o padding para telas menores */
-        align-items: center;
-        /* Centraliza os itens horizontalmente */
-        text-align: center;
-        /* Centraliza o texto dentro do nav */
+      padding: 15px 15px; /* Reduz o padding para telas menores */
+      align-items: center; /* Centraliza os itens horizontalmente */
+      text-align: center; /* Centraliza o texto dentro do nav */
     }
-
+  
     nav img {
-        height: 30px;
-        /* Reduz a altura da imagem */
-        margin-right: 10px;
-        /* Reduz o espaço à direita da imagem */
+      height: 30px; /* Reduz a altura da imagem */
+      margin-right: 10px; /* Reduz o espaço à direita da imagem */
     }
-
+  
     nav h1 {
-        font-size: 18px;
-        /* Reduz o tamanho da fonte do título */
-        margin-left: 0;
-        /* Remove a margem esquerda */
-        text-align: center;
-        /* Centraliza o texto */
+      font-size: 18px; /* Reduz o tamanho da fonte do título */
+      margin-left: 0; /* Remove a margem esquerda */
+      text-align: center; /* Centraliza o texto */
     }
-
+  
     .footer-app {
-        height: auto;
-        /* Ajusta a altura do footer */
-        padding: 10px;
-        /* Adiciona padding interno */
+      height: auto; /* Ajusta a altura do footer */
+      padding: 10px; /* Adiciona padding interno */
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     nav {
-        padding: 15px;
-        /* Reduz ainda mais o padding para telas muito pequenas */
+      padding: 15px; /* Reduz ainda mais o padding para telas muito pequenas */
     }
-
+  
     nav img {
-        height: 20px;
-        /* Reduz a altura da imagem para telas muito pequenas */
+      height: 20px; /* Reduz a altura da imagem para telas muito pequenas */
     }
-
+  
     nav h1 {
-        font-size: 16px;
-        /* Reduz o tamanho da fonte do título para telas muito pequenas */
+      font-size: 16px; /* Reduz o tamanho da fonte do título para telas muito pequenas */
     }
-
+  
     .footer-app {
-        font-size: 14px;
-        /* Ajusta o tamanho da fonte no footer para telas pequenas */
-        padding: 5px;
-        /* Ajusta o padding do footer para telas muito pequenas */
+      font-size: 14px; /* Ajusta o tamanho da fonte no footer para telas pequenas */
+      padding: 5px; /* Ajusta o padding do footer para telas muito pequenas */
     }
-}
+  }
+  

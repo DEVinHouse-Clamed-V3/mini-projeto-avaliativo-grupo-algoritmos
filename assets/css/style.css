@@ -7,14 +7,7 @@
 html,
 body {
   font-family: Arial, sans-serif;
-  min-height: 100vh;
-}
-.header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  height: 100vh;
 }
 
 nav {
@@ -62,25 +55,260 @@ nav a {
   text-transform: uppercase;
 }
 
-/* CADASTRO DE MEDICAMENTOS */
-.container-cadastro {
-  width: 500px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 20px;
+nav a:hover {
+  color: red;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+/* HOME */
+.container-home {
+  width: 100%;
+  min-height: 100vh;
+  margin: 30px auto;
+}
+
+.topo {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.categorias-home img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.categorias-home img:hover {
+  position: relative;
+  top: -4px;
+  box-shadow: 0 2px 2px #7c7979;
+}
+
+.categorias-home p {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
-.login-form {
- height: 550px;
+.container-slides {
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  margin: 80px auto;
 }
 
-.login-form fieldset {
+.cont-input {
+  text-align: center;
+}
+
+.slides {
+  display: flex;
+}
+.slide {
+  width: 100%;
+}
+
+.slide img {
+  width: 900px;
+  height: 340px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Controle das transições dos slides */
+#radio1:checked ~ .slides {
+  transform: translateX(0);
+}
+#radio2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+#radio3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+#radio4:checked ~ .slides {
+  transform: translateX(-300%);
+}
+#radio5:checked ~ .slides {
+  transform: translateX(-400%);
+}
+#radio6:checked ~ .slides {
+  transform: translateX(-500%);
+}
+
+/* OFERTAS - MAIS PROCURADOS/HOME */
+.ofertas,
+.mais-procurados {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.ofertas-do-dia h2,
+.procurados h2 {
+  font-size: 32px;
+  text-align: center;
+  margin: 60px;
+}
+
+.card-ofertas,
+.card-procurados {
+  width: 250px;
+  height: 280px;
+}
+
+.card-ofertas img,
+.card-procurados img {
+  width: 120px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.card-ofertas img:hover,
+.card-procurados img :hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card-ofertas h3,
+h4,
+p,
+.card-procurados img,
+h3 {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.card-ofertas p {
+  text-decoration: line-through;
+}
+
+.card-ofertas h4 {
+  color: #ff0000;
+}
+
+.card-ofertas button,
+.card-procurados button {
+  display: block;
+  margin: 5px auto;
+  padding: 2px;
+  width: 50%;
+  background-color: #285619;
+  border-color: #17360c;
+  color: white;
+}
+
+.card-ofertas button:hover,
+.card-procurados button:hover {
+  background-color: #4ca21d;
+}
+
+/* ALERT/NOTÍCIAS */
+.content-alert {
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.alert-info {
+  width: 40%;
+  padding: 40px;
+}
+
+.alert-info h2,
+h3 {
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  line-height: 20px;
+  text-align: center;
+}
+
+.alert-info img {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 220px;
+}
+
+/* CADASTRO DE MEDICAMENTOS */
+.cadastro-farmacia {
+  display: flex;
+  min-height: 100%;
+}
+
+.intro-cadastro {
+  width: 40%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #17360c;
+}
+
+.info-cadastro h2 {
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.info-cadastro h3 {
+  font-size: 26px;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  margin: 40px;
+}
+
+.info-cadastro p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.info-cadastro img {
+  display: block;
+  margin: 80px auto 0;
+}
+
+.cadastro-logo {
+  display: flex;
   padding: 30px;
+}
+
+.cadastro-logo img {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.cadastro-logo h1 {
+  color: #ffffff;
+}
+
+.cadastro-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.cadastro-nav a:hover {
+  color: rgb(171, 20, 20);
+}
+
+.container-cadastro {
+  width: 40%;
+  height: 580px;
+  padding: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: auto;
 }
 
 .login-form label {
@@ -91,7 +319,8 @@ nav a {
 
 .login-form legend {
   color: #285619;
-  font-size: 22px;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .login-form input,
@@ -101,7 +330,7 @@ nav a {
   width: 100%;
   border: none;
   padding: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   padding: 10px;
   font-size: 16px;
   resize: vertical;
@@ -117,72 +346,86 @@ nav a {
   color: #fff;
   font-size: 14px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .login-form button:hover {
   background: #4ca21d;
 }
 
-/* TODOS OS MEDICAMENTOS */
-.todos-medicamentos {
-  width: calc(100% - 500px);
-  margin-left: 500px;
-  padding: 20px;
-  position: relative;
-}
+/* MEDICAMENTOS CADASTRADOS (Lucas) */
 
-.todos-medicamentos h2 {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.lista-medicamentos {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.medicamentos {
-  max-width: 280px;
-  margin: 20px auto;
+/* LOGIN */
+.formulario-login {
+  max-width: 50%;
   height: auto;
-  padding: 20px;
+  margin: 60px auto;
+  padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.medicamentos img {
-  width: 180px;
-  height: 200px;
-  object-fit: cover;
+.formulario-login h2 {
+  color: #285619;
+  font-size: 26px;
 }
 
-.medicamentos h3,
-.medicamentos p {
-  margin: 8px auto;
-  font-weight: bold;
+.formulario-login p {
+  color: #808080;
+  margin-bottom: 15px;
+}
+
+.formulario-login input {
+  outline-color: #4ca21d;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.formulario-login button {
+  text-transform: uppercase;
+  background: #285619;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.formulario-login button:hover {
+  background: #4ca21d;
+}
+
+.formulario-login .message {
+  margin: 15px 0 0;
+  color: #808080;
   font-size: 14px;
 }
 
-.medicamentos span {
-  font-weight: lighter;
+.formulario-login .message a {
+  color: #285619;
+  text-decoration: none;
 }
 
-.medicamentos button {
-  padding: 4px;
-  background-color: #285619;
-  color: #ffffff;
-  border-color: #17360c;
-}
-
-.medicamentos button:hover {
-  background-color: #4ca21d;
+.formulario-login:before,
+.formulario-login:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .footer-app {
   z-index: 2;
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 120px;
+  bottom: 0;
   color: #285619;
   background-color: #b4b4b4;
   border-top-left-radius: 15px;
@@ -194,7 +437,7 @@ nav a {
   align-items: end;
   justify-content: center;
   font-size: 12px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .footer-app-list {
@@ -258,13 +501,68 @@ nav a {
     /* Centraliza o texto */
   }
 
-  .login-form {
-    max-width: 90%;
+  /* HOME */
+  .categorias-home img {
+    width: 70px;
+    height: 70px;
   }
 
-  .login-form input,
-  .login-form textarea {
-    font-size: 14px;
+  .categorias-home p {
+    display: none;
+  }
+
+  .container-slides {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .slide img {
+    width: 480px;
+    height: 180px;
+  }
+
+  /* OFERTAS - MAIS PROCURADOS/HOME */
+  .ofertas,
+  .mais-procurados {
+    display: block;
+  }
+
+  .card-ofertas,
+  .card-procurados {
+    margin: 0 auto;
+  }
+
+  /* ALERT/NOTÍCIAS */
+  .content-alert {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .alert-info {
+    width: 90%;
+  }
+
+  /* CADASTRO DE MEDICAMENTOS */
+  .cadastro-farmacia {
+    display: block;
+  }
+
+  .intro-cadastro {
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #17360c;
+  }
+
+  .container-cadastro {
+    width: 90%;
+    height: 550px;
+    margin: 40px auto;
+  }
+
+  /* LOGIN */
+  .formulario-login {
+    max-width: 90%;
   }
 
   .footer-app {
@@ -291,9 +589,51 @@ nav a {
     /* Reduz o tamanho da fonte do título para telas muito pequenas */
   }
 
+  /* HOME */
+  .categorias-home img {
+    padding: 6px;
+  }
+
+  .categorias-home p {
+    display: none;
+  }
+
+  .container-slides {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .slide img {
+    width: 430px;
+    height: 160px;
+  }
+
+  /* ALERT/NOTÍCIAS */
+  .content-alert {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .alert-info {
+    width: 90%;
+  }
+
+  .alert-info img {
+    width: 300px;
+  }
+
+  /* CADASTRO DE MEDICAMENTOS */
   .login-form input,
   .login-form textarea {
-    font-size: 12px;
+    padding: 8px;
+    margin-bottom: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* LOGIN */
+  .formulario-login {
+    max-width: 90%;
   }
 
   .footer-app {

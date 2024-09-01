@@ -17,7 +17,7 @@ function adicionarMedicamento(event) {
             indicacao: indicacao,
         }
 
-        const listaNoLocalStorage = JSON.parse(localStorage.getItem("medicamento")) || [];
+        const listaNoLocalStorage = JSON.parse(localStorage.getItem("medicamento")) || []
         listaNoLocalStorage.push(cadastro);
         localStorage.setItem("medicamento", JSON.stringify(listaNoLocalStorage))
         document.getElementById('form-farmacia').reset()

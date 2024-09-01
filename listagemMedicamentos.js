@@ -10,11 +10,10 @@ function deletar(idRecebido){
 }
 
 function carregarDados() {
- console.log("chamei a funcao")
- const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
+   const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
 
  const lista = document.getElementById('medicamento')
 
- medicamentoMemoria.forEach((pemedicamentot) => {
+ medicamentoMemoria.forEach((medicamento) => {
  }
 )}

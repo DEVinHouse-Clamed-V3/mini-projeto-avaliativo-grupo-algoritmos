@@ -1,25 +1,31 @@
 function carregarDados() {
-  const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
+  const medicamentoMemoria = JSON.parse(localStorage.getItem('cadastro'))
   const lista = document.getElementById('lista-medicamentos')
 
-  const div = document.createElement('div')
-  div.classList.add('item-medicamento')
+  medicamentoMemoria.array.forEach(cadastro => {
 
-  const img = document.createElement('img')
-  img.setAttribute("width", "150px")
-  img.setAttribute("src", "https://www.drogariaminasbrasil.com.br/media/product/013/tylenol-750mg-com-20-comprimidos-e10.jpg")
-  div.appendChild(img)
+      const div = document.createElement('div')
+      div.classList.add('item-medicamento')
 
-  const h2 = document.createElement('h2')
-  h2.innerText = 'Tilenol'
-  div.appendChild(h2)
+      const img = document.createElement('img')
+      img.setAttribute("width", "150px")
+      img.style.objectFit = "cover"
+      img.setAttribute("src", cadastro.foto)
+      div.appendChild(img)
 
-  div.appendChild(lista)
+      const h2 = document.createElement('h2')
+      h2.innerText = cadastro.nome
+      div.appendChild(h2)
 
+      const button = document.createElement('button')
+      button.innerText = "Deletar"
+      button.onclick = () => deletar(cadastro)
+      div.appendChild(button)
+
+      lista.appendChild(div)
+
+  });
 
 }
-
-
-
 
 document.addEventListener('DOMContentLoaded', carregarDados) 

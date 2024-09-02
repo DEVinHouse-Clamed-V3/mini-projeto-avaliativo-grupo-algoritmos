@@ -1,19 +1,25 @@
-
-function deletar(idRecebido){
+function carregarDados() {
   const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
-  const medicamentoFiltrados =  petsAtuaisNaMemoria.filter((item) => item.id !== idRecebido  )
+  const lista = document.getElementById('lista-medicamentos')
 
-  localStorage.setItem('medicamento', JSON.stringify(medicamentoFiltrados))
+  const div = document.createElement('div')
+  div.classList.add('item-medicamento')
 
-  document.getElementById('medicamento').innerText = ''
-  carregarDados()
+  const img = document.createElement('img')
+  img.setAttribute("width", "150px")
+  img.setAttribute("src", "https://www.drogariaminasbrasil.com.br/media/product/013/tylenol-750mg-com-20-comprimidos-e10.jpg")
+  div.appendChild(img)
+
+  const h2 = document.createElement('h2')
+  h2.innerText = 'Tilenol'
+  div.appendChild(h2)
+
+  div.appendChild(lista)
+
+
 }
 
-function carregarDados() {
-   const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
 
- const lista = document.getElementById('medicamento')
 
- medicamentoMemoria.forEach((medicamento) => {
- }
-)}
+
+document.addEventListener('DOMContentLoaded', carregarDados) 

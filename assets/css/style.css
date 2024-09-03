@@ -27,14 +27,14 @@ nav {
 
 nav img {
   height: 40px;
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 nav h1 {
   color: white;
   margin: 0;
   font-size: 20px;
-  margin-left: 15px; 
+  margin-left: 15px;
 }
 
 nav ul {
@@ -58,7 +58,6 @@ nav a {
 nav a:hover {
   color: red;
 }
-
 
 /* CADASTRO DE MEDICAMENTOS */
 .cadastro-farmacia {
@@ -247,6 +246,46 @@ nav a:hover {
   clear: both;
 }
 
+/* LISTAGEM DE MEDICAMENTOS */
+.container-listagem {
+  width: 90%;
+  margin: 0 auto;
+}
+.container-listagem h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+#lista-medicamentos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#lista-medicamentos img,
+button {
+  display: block;
+  margin: 10px auto;
+}
+
+#lista-medicamentos h2 {
+  text-align: center;
+}
+
+#lista-medicamentos button {
+  padding: 5px;
+  background-color: #285619;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+#lista-medicamentos button:hover {
+  background-color: #4ca21d;
+}
+
 @media (max-width: 768px) {
   nav {
     padding: 15px 15px;
@@ -292,11 +331,14 @@ nav a:hover {
   }
 
   .login-form button:first-child,
-.login-form button:nth-child(2) {
-  padding: 5px;
-  width: 40%;
-}
+  .login-form button:nth-child(2) {
+    padding: 5px;
+    width: 40%;
+  }
 
+  .formulario-login {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -329,4 +371,7 @@ nav a:hover {
     max-width: 90%;
   }
 
+  #lista-medicamentos h1 {
+    font-size: 26px;
+  }
 }

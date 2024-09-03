@@ -1,11 +1,10 @@
-function deletar(idRecebido){
-   const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
-   const medicamentoFiltrados =  petsAtuaisNaMemoria.filter((item) => item.id !== idRecebido  )
+function deletardados(idRecebido) {
+  const medicamentoAtualMemoria = JSON.parse(localStorage.getItem('medicamento'))
+  const medFiltrados = medicamentoAtualMemoria.filter((item) => item.id !== idRecebido)
+  localStorage.setItem('medicamento', JSON.stringify(medFiltrados))
+  document.getElementById('lista-medicamentos').innerText = ''
+  carregarDados()
 
-   localStorage.setItem('medicamento', JSON.stringify(medicamentoFiltrados))
-
-   document.getElementById('medicamento').innerText = ''
-   carregarDados()
 }
 
 function carregarDados() {
@@ -18,19 +17,9 @@ function carregarDados() {
   }
 )}
 
-function deletardados(idRecebido) {
-  const medicamentoAtualMemoria = JSON.parse(localStorage.getItem('cadastro'))
-  const medFiltrados = medicamentoAtualMemoria.filter((item) => item.id !== idRecebido)
-  localStorage.setItem('cadastro', JSON.stringify(medFiltrados))
-
-
-  document.getElementById('lista-medicamentos').innerText = ''
-  carregarDados()
-
-}
 
 function carregarDados() {
-  const medicamentoMemoria = JSON.parse(localStorage.getItem('cadastro'))
+  const medicamentoMemoria = JSON.parse(localStorage.getItem('medicamento'))
   const lista = document.getElementById('lista-medicamentos')
 
   medicamentoMemoria.array.forEach(cadastro => {

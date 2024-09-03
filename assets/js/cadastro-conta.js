@@ -1,5 +1,4 @@
 function cadastrarUsuario(event) {
-  event.preventDefault();
 
   const nomeUsuario = document.getElementById("nome-cadastro").value;
   const senhaUsuario = document.getElementById("senha").value;
@@ -16,6 +15,8 @@ function cadastrarUsuario(event) {
 
   usuariosCadastrados.push(usuario);
   localStorage.setItem("usuarios", JSON.stringify(usuariosCadastrados));
+
+  alert("Usuário cadastrado com sucesso")
 }
 
 document

@@ -11,7 +11,7 @@ function login(event) {
   if (validarLogin == undefined) {
     alert("Usuário ou senha estão incorretos")
   } else {
-    window.location.href = "index.html"
+    window.location.href = "cadastro-medicamentos.html"
   }
 
 }
